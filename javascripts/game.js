@@ -4545,6 +4545,12 @@ setInterval(function() {
         }
         document.getElementById("toggleallinfdims").style.visibility = "hidden"
     }
+	
+    if (player.eternities > 100)
+        document.getElementById("togglealltimedims").style.visibility = "visible"
+    } else
+        document.getElementById("togglealltimedims").style.visibility = "hidden"
+    }
 
     if (player.eternities !== 0) document.getElementById("eternityconf").style.display = "inline-block"
     else document.getElementById("eternityconf").style.display = "none"
