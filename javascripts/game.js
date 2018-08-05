@@ -162,7 +162,6 @@ var player = {
         baseAmount: 0
     },
     infDimBuyers: [false, false, false, false, false, false, false, false],
-    timeDimBuyers: [false],
     timeShards: new Decimal(0),
     tickThreshold: new Decimal(1),
     totalTickGained: 0,
@@ -1688,7 +1687,6 @@ function galaxyReset() {
         infinityDimension7: player.infinityDimension7,
         infinityDimension8: player.infinityDimension8,
         infDimBuyers: player.infDimBuyers,
-	timeDimBuyers: player.timeDimBuyers,
         timeShards: player.timeShards,
         tickThreshold: player.tickThreshold,
         timeDimension1: player.timeDimension1,
@@ -2919,7 +2917,6 @@ document.getElementById("bigcrunch").onclick = function () {
             infinityDimension7: player.infinityDimension7,
             infinityDimension8: player.infinityDimension8,
             infDimBuyers: player.infDimBuyers,
-	    timeDimBuyers: player.timeDimBuyers,
             timeShards: player.timeShards,
             tickThreshold: player.tickThreshold,
             timeDimension1: player.timeDimension1,
@@ -3042,15 +3039,6 @@ document.getElementById("bigcrunch").onclick = function () {
                 if (player.infDimBuyers[i-1]) {
                     buyMaxInfDims(i)
                     buyManyInfinityDimension(i)
-                }
-            }
-        }
-	    
-        if (player.eternities > 100 && player.currentEternityChall !== "eterc1" && player.currentEternityChall !== "eterc10") {
-            for (var i=1;i<player.eternities-99 && i < 99; i++) {
-                if (player.timeDimBuyers[i-1]) {
-                    buyMaxTimeDims(i)
-                    buyManyTimeDimension(i)
                 }
             }
         }
@@ -3277,7 +3265,6 @@ function eternity(force, auto) {
                 baseAmount: 0
             },
             infDimBuyers: player.infDimBuyers,
-	    timeDimBuyers: player.timeDimBuyers,
             timeShards: new Decimal(0),
             tickThreshold: new Decimal(1),
             totalTickGained: 0,
@@ -3543,7 +3530,6 @@ function startChallenge(name, target) {
       infinityDimension7: player.infinityDimension7,
       infinityDimension8: player.infinityDimension8,
       infDimBuyers: player.infDimBuyers,
-      timeDimBuyers: plauer.timeDimBuyers,
       timeShards: player.timeShards,
       tickThreshold: player.tickThreshold,
       timeDimension1: player.timeDimension1,
@@ -4083,7 +4069,6 @@ function startEternityChallenge(name, startgoal, goalIncrease) {
                 baseAmount: 0
             },
             infDimBuyers: player.infDimBuyers,
-	    timeDimBuyers: player.timeDimBuyers,
             timeShards: new Decimal(0),
             tickThreshold: new Decimal(1),
             totalTickGained: 0,
@@ -4544,12 +4529,6 @@ setInterval(function() {
             document.getElementById("infauto"+i).style.visibility = "hidden"
         }
         document.getElementById("toggleallinfdims").style.visibility = "hidden"
-    }
-	
-    if (player.eternities > 100)
-        document.getElementById("togglealltimedims").style.visibility = "visible"
-    } else
-        document.getElementById("togglealltimedims").style.visibility = "hidden"
     }
 
     if (player.eternities !== 0) document.getElementById("eternityconf").style.display = "inline-block"
