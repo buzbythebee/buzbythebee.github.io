@@ -872,6 +872,9 @@
                                 <td>
                                     <div id="timeAmount1">0 (0)</div>
                                 </td>
+                                <td>
+                                    <button id="timeauto1" style="width:70px; font-size: 10px; float: right; visibility: hidden" onclick="switchAutoTime(1)" class="storebtn">Auto: ON</button>
+                                </td>
                                 <td align="right" width="10%">
                                     <button id="timeMax1" style="color:black; width:195px; height:30px" class="storebtn" align="right" onclick="buyTimeDimension(1)">Cost: 10</button>
                                 </td>
@@ -882,6 +885,10 @@
                                 </td>
                                 <td>
                                     <div id="timeAmount2" align="left">0 (0)</div>
+				</td>
+                                <td>
+                                    <button id="timeauto2" style="width:70px; font-size: 10px; float: right; visibility: hidden" onclick="switchAutoTime(2)" class="storebtn">Auto: ON</button>
+                                </td>
                                 <td>
                                     <button id="timeMax2" style="color:black; width:195px; height:30px" class="storebtn" onclick="buyTimeDimension(2)">Cost: 10</button>
                                 </td>
@@ -892,6 +899,9 @@
                                 </td>
                                 <td>
                                     <div id="timeAmount3" align="left">0 (0)</div>
+                                </td>
+                                <td>
+                                    <button id="timeauto3" style="width:70px; font-size: 10px; float: right; visibility: hidden" onclick="switchAutoTime(3)" class="storebtn">Auto: ON</button>
                                 </td>
                                 <td>
                                     <button id="timeMax3" style="color:black; width:195px; height:30px" class="storebtn" onclick="buyTimeDimension(3)">Cost: 10</button>
@@ -905,6 +915,9 @@
                                     <div id="timeAmount4" align="left">0 (0)</div>
                                 </td>
                                 <td>
+                                    <button id="timeauto4" style="width:70px; font-size: 10px; float: right; visibility: hidden" onclick="switchAutoTime(4)" class="storebtn">Auto: ON</button>
+                                </td>
+                                <td>
                                     <button id="timeMax4" style="color:black; width:195px; height:30px" class="storebtn" onclick="buyTimeDimension(4)">Cost: 10</button>
                                 </td>
                             </tr>
@@ -914,6 +927,9 @@
                                 </td>
                                 <td>
                                     <div id="timeAmount5" align="left">0 (0)</div>
+                                </td>
+                                <td>
+                                    <button id="timeauto5" style="width:70px; font-size: 10px; float: right; visibility: hidden" onclick="switchAutoTime(5)" class="storebtn">Auto: ON</button>
                                 </td>
                                 <td>
                                     <button id="timeMax5" style="color:black; width:195px; height:30px" class="storebtn" onclick="buyTimeDimension(5)">Cost: 10</button>
@@ -927,6 +943,9 @@
                                     <div id="timeAmount6" align="left">0 (0)</div>
                                 </td>
                                 <td>
+                                    <button id="timeauto6" style="width:70px; font-size: 10px; float: right; visibility: hidden" onclick="switchAutoTime(6)" class="storebtn">Auto: ON</button>
+                                </td>
+                                <td>
                                     <button id="timeMax6" style="color:black; width:195px; height:30px" class="storebtn" onclick="buyTimeDimension(6)">Cost: 10</button>
                                 </td>
                             </tr>
@@ -936,6 +955,9 @@
                                 </td>
                                 <td>
                                     <div id="timeAmount7" align="left">0 (0)</div>
+                                </td>
+                                <td>
+                                    <button id="timeauto7" style="width:70px; font-size: 10px; float: right; visibility: hidden" onclick="switchAutoTime(7)" class="storebtn">Auto: ON</button>
                                 </td>
                                 <td>
                                     <button id="timeMax7" style="color:black; width:195px; height:30px" class="storebtn" onclick="buyTimeDimension(7)">Cost: 10</button>
@@ -949,10 +971,16 @@
                                     <div id="timeAmount8" align="left">0 (0)</div>
                                 </td>
                                 <td>
+                                    <button id="timeauto8" style="width:70px; font-size: 10px; float: right; visibility: hidden" onclick="switchAutoTime(8)" class="storebtn">Auto: ON</button>
+                                </td>
+                                <td>
                                     <button id="timeMax8" style="color:black; width:195px; height:30px" class="storebtn" onclick="buyTimeDimension(8)">Cost: 10</button>
                                 </td>
                             </tr>
                         </table>
+                <div id="toggletimedims" style="display: none;"></div>
+                <button id="togglealltimedims"style="width:140px; height: 30px; font-size: 12px; visibility: hidden" onclick="toggleAllTimeDims()" class="storebtn">Toggle all ON/OFF</button>
+            </div>
 
             </div>
             <div id="production" class="dimtab">
