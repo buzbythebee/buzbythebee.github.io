@@ -4531,6 +4531,18 @@ setInterval(function() {
         document.getElementById("toggleallinfdims").style.visibility = "hidden"
     }
 
+    if (player.eternities > 100) {
+        for (var i=1;i<player.eternities-99 && i < 99; i++) {
+            document.getElementById("timeauto"+i).style.visibility = "visible"
+        }
+        document.getElementById("togglealltimedims").style.visibility = "visible"
+    } else {
+        for (var i=1; i<99; i++) {
+            document.getElementById("timeauto"+i).style.visibility = "hidden"
+        }
+        document.getElementById("togglealltimedims").style.visibility = "hidden"
+    }
+
     if (player.eternities !== 0) document.getElementById("eternityconf").style.display = "inline-block"
     else document.getElementById("eternityconf").style.display = "none"
     if (player.eternities >= 40) document.getElementById("replauto1").style.visibility = "visible"
