@@ -147,3 +147,36 @@ function resetTimeDimensions() {
 function buyMaxTimeDimensions() {
   for(var i=1; i<9; i++) while(buyTimeDimension(i)) continue
 }
+
+function switchAutoTime(tier) {
+  if (player.timeDimBuyers[tier-1]) {
+      player.timeDimBuyers[tier-1] = false
+      document.getElementById("timeauto"+tier).textContent = "Auto: OFF"
+  } else {
+      player.timeDimBuyers[tier-1] = true
+      document.getElementById("timeauto"+tier).textContent = "Auto: ON"
+  }
+}
+
+function toggleAllTimeDims() {
+  if (player.timeDimBuyers[0]) {
+      for (var i=1; i<9; i++) {
+          player.timeDimBuyers[i-1] = false
+          document.getElementById("timeauto"+i).textContent = "Auto: OFF"
+      }
+  } else {
+      for (var i=1; i<9; i++) {
+          if (player.eternities - 100>=i) {
+              player.timeDimBuyers[i-1] = true
+              document.getElementById("timeauto"+i).textContent = "Auto: ON"
+          }
+      }
+  }
+}
+
+function loadTimeAutoBuyers() {
+  for (var i=1; i<9; i++) {
+      if (player.timeDimBuyers[i-1]) document.getElementById("timeauto"+i).textContent = "Auto: ON"
+      else document.getElementById("timeauto"+i).textContent = "Auto: OFF"
+  }
+}
