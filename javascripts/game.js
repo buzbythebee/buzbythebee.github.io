@@ -5349,16 +5349,6 @@ function gameLoop(diff) {
         if (player.infDimBuyers[i-1]) buyMaxInfDims(infdimpurchasewhileloop)
         infdimpurchasewhileloop = 1;
     }
-	
-    var timedimpurchasewhileloop = 1;
-    while (player.eternities > 101 && player.timeDimensionsUnlocked[7] === false) {
-        for (i=0; i<8; i++) {
-            if (player.timeDimensionsUnlocked[i]) infdimpurchasewhileloop++
-        }
-        newDimension()
-        if (player.timeDimBuyers[i-1]) buyMaxTimeDims(timedimpurchasewhileloop)
-        timedimpurchasewhileloop = 1;
-    }
 
     document.getElementById("newDimensionButton").textContent = "Get " + shortenCosts(getNewInfReq()) + " antimatter to unlock a new Dimension."
 
