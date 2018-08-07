@@ -5350,6 +5350,15 @@ function gameLoop(diff) {
         infdimpurchasewhileloop = 1;
     }
 
+    var timedimpurchasewhileloop = 1;
+    while (player.eternities > 101) {
+        for (i=0; i<8; i++) {
+            timedimpurchasewhileloop++
+        }
+        if (player.timeDimBuyers[i-1]) buyMaxTimeDims(timedimpurchasewhileloop)
+        infdimpurchasewhileloop = 1;
+    }
+
     document.getElementById("newDimensionButton").textContent = "Get " + shortenCosts(getNewInfReq()) + " antimatter to unlock a new Dimension."
 
     document.getElementById("sacrifice").setAttribute('ach-tooltip', "Boosts 8th Dimension by " + formatValue(player.options.notation, calcSacrificeBoost(), 2, 2) + "x");
