@@ -4537,7 +4537,7 @@ setInterval(function() {
         }
         document.getElementById("togglealltimedims").style.visibility = "visible"
     } else {
-        for (var i=1; i<99; i++) {
+        for (var i=1; i<9; i++) {
             document.getElementById("timeauto"+i).style.visibility = "hidden"
         }
         document.getElementById("togglealltimedims").style.visibility = "hidden"
