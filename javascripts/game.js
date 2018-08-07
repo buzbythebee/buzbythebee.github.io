@@ -4532,7 +4532,7 @@ setInterval(function() {
     }
 
     if (player.eternities > 100) {
-        for (var i=1;i<player.eternities-99 && i < 99; i++) {
+        for (var i=1;i<player.eternities-99 && i < 9; i++) {
             document.getElementById("timeauto"+i).style.visibility = "visible"
         }
         document.getElementById("togglealltimedims").style.visibility = "visible"
