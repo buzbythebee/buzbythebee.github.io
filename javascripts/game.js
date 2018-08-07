@@ -3267,7 +3267,7 @@ function eternity(force, auto) {
                 baseAmount: 0
             },
             infDimBuyers: player.infDimBuyers,
-            infDimBuyers: player.timeDimBuyers,
+            timeDimBuyers: player.timeDimBuyers,
             timeShards: new Decimal(0),
             tickThreshold: new Decimal(1),
             totalTickGained: 0,
