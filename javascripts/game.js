@@ -162,6 +162,7 @@ var player = {
         baseAmount: 0
     },
     infDimBuyers: [false, false, false, false, false, false, false, false],
+    timeDimBuyers: [false, false, false, false, false, false, false, false],
     timeShards: new Decimal(0),
     tickThreshold: new Decimal(1),
     totalTickGained: 0,
