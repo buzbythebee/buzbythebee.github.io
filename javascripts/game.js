@@ -1687,7 +1687,7 @@ function galaxyReset() {
         infinityDimension7: player.infinityDimension7,
         infinityDimension8: player.infinityDimension8,
         infDimBuyers: player.infDimBuyers,
-	timeDimBuyers: plyer.timeDimBuyers,
+        timeDimBuyers: player.timeDimBuyers,
         timeShards: player.timeShards,
         tickThreshold: player.tickThreshold,
         timeDimension1: player.timeDimension1,
@@ -2918,7 +2918,7 @@ document.getElementById("bigcrunch").onclick = function () {
             infinityDimension7: player.infinityDimension7,
             infinityDimension8: player.infinityDimension8,
             infDimBuyers: player.infDimBuyers,
-	    timeDimBuyers: player.timeDimBuyers,
+            timeDimBuyers: player.timeDimBuyers,
             timeShards: player.timeShards,
             tickThreshold: player.tickThreshold,
             timeDimension1: player.timeDimension1,
@@ -3267,6 +3267,7 @@ function eternity(force, auto) {
                 baseAmount: 0
             },
             infDimBuyers: player.infDimBuyers,
+            infDimBuyers: player.timeDimBuyers,
             timeShards: new Decimal(0),
             tickThreshold: new Decimal(1),
             totalTickGained: 0,
@@ -3532,6 +3533,7 @@ function startChallenge(name, target) {
       infinityDimension7: player.infinityDimension7,
       infinityDimension8: player.infinityDimension8,
       infDimBuyers: player.infDimBuyers,
+      timeDimBuyers: player.timeDimBuyers,
       timeShards: player.timeShards,
       tickThreshold: player.tickThreshold,
       timeDimension1: player.timeDimension1,
@@ -4071,6 +4073,7 @@ function startEternityChallenge(name, startgoal, goalIncrease) {
                 baseAmount: 0
             },
             infDimBuyers: player.infDimBuyers,
+            timeDimBuyers: player.timeDimBuyers,
             timeShards: new Decimal(0),
             tickThreshold: new Decimal(1),
             totalTickGained: 0,
@@ -5345,6 +5348,16 @@ function gameLoop(diff) {
         newDimension()
         if (player.infDimBuyers[i-1]) buyMaxInfDims(infdimpurchasewhileloop)
         infdimpurchasewhileloop = 1;
+    }
+	
+    var timedimpurchasewhileloop = 1;
+    while (player.eternities > 101 && player.timeDimensionsUnlocked[7] === false) {
+        for (i=0; i<8; i++) {
+            if (player.timeDimensionsUnlocked[i]) infdimpurchasewhileloop++
+        }
+        newDimension()
+        if (player.timeDimBuyers[i-1]) buyMaxTimeDims(timedimpurchasewhileloop)
+        timedimpurchasewhileloop = 1;
     }
 
     document.getElementById("newDimensionButton").textContent = "Get " + shortenCosts(getNewInfReq()) + " antimatter to unlock a new Dimension."
